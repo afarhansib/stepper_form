@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	transition: .2s;
+	/*border: 1px solid red;*/
+	box-sizing: border-box;
+	text-decoration: none;
+	color: var(--color-text);
+	font-family: "Montserrat", sans-serif;
+}
+:root {
+	--color-base: #e1e6ec;
+	--color-text: #666;
+	--color-white: white;
+	--color-shadow: #babecc;
+	--color-accent: #E22E49;
+}
+body {
+	background-color: var(--color-base);
+	text-align: center;
+}
+h1 {
+	margin-bottom: 10px;
+}
+p {
+	color: var(--color-accent);
+	margin-bottom: 30px;
+}
+div.container {
+	max-width: 600px;
+	margin: 60px auto;
+}
+.neu {
+  box-shadow: -2px -2px 5px var(--color-white), 2px 2px 5px var(--color-shadow);
+	/*box-shadow: -5px -5px 20px var(--color-white),  5px 5px 10px var(--color-shadow);*/
+}
+.neu[class*="btn"]:active, .nav a[class*="neu"]:active {
+  box-shadow: inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+}
+.neu-inset {
+	transition: all 0.2s ease-in-out;
+	box-shadow:  inset 2px 2px 5px var(--color-shadow), inset -2px -2px 5px var(--color-white);
+}
+.neu-inset:focus {
+	outline: none;
+	box-shadow:  inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+}
+
+/*wrap*/
+div.wrap {
+	max-width: 400px;
+	margin: 20px auto 10px auto;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: left;
+}
+/*form*/
+form.parts {
+	margin-left: 60px;
+	position: relative;
+	/*width: calc()100%;*/
+}
+div.left-bar {
+	background-color: var(--color-base);
+	left: -40px;
+	border-radius: 10px;
+	width: 10px;
+	height: 100%;
+	position: absolute;
+}
+form.parts > [class*="part"] {
+	height: 40px;
+	overflow: hidden;
+}
+.part-active {
+	height: unset !important;
+}
+.nav-active {
+	margin-bottom: 141px !important;
+}
+form.parts > [class*="part"]:not(:last-child) {
+	margin-bottom: 20px;
+}
+form.parts > [class*="part"]::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+form.parts a:not(.btn) {
+	display: block;
+	line-height: 40px;
+	position: relative;
+	margin-bottom: 10px;
+	/*background-color: var(--color-accz);*/
+	/*font-weight: bold;*/
+}
+form.parts a:not(.btn):hover {
+	color: var(--color-accent);
+}
+form.parts .nav {
+	position: absolute;
+	left: -55px;
+	z-index: 5;
+	/*top: -5px;*/
+}
+form.parts .nav a {
+	border-radius: 50%;
+	display: block;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: var(--color-base);
+	color: var(--color-accent);
+	font-weight: bold;
+	margin-bottom: 20px;
+	/*font-weight: bold;*/
+}
+label {
+	margin-bottom: 10px;
+	font-weight: bold;
+	border-left: 4px solid var(--color-accent);
+	padding: 5px 10px;
+}
+label, input:not([type="submit"]) {
+	display: block;
+}
+input:not([type="submit"]) {
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: unset;
+	border-radius: 10px;
+	border: none;
+	appearance: none;
+  -webkit-appearance: none;
+  padding: 10px;
+}
+.btn {
+	border: none;
+	text-transform: uppercase;
+	font-size: small;
+	display: block;
+	float: left;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.btn[class*="cant-neu"] {
+	background-color: var(--color-accent);
+	color: var(--color-white);
+	font-weight: bold;
+}
+.btn:last-child {
+	margin-left: 10px;
+}
+div.part1 .btn {
+	margin-left: 0px;
+}
+div.copyright {
+	font-size: small;
+}
+.toast {
+	background-color: var(--color-base);
+	position: fixed;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	padding: 5px 10px;
+	bottom: 60px;
+	border-radius: 5px;
+	border-left: 4px solid var(--color-accent);
+}
